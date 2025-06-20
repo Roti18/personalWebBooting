@@ -10,7 +10,6 @@ const nextConfig: NextConfig = {
   output: "export",
   assetPrefix: assetPrefix,
   basePath: basePath,
-
   images: {
     unoptimized: true,
     domains: ["storageangkatan.netlify.app"],

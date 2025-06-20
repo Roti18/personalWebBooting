@@ -11,9 +11,11 @@ on:
 
 # Konfigurasi pekerjaan (jobs)
 jobs:
-  build-and-deploy:
-    # Menggunakan server Ubuntu versi terbaru
+  deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     # Memberikan izin pada workflow untuk menulis ke repository
     permissions:
@@ -63,7 +65,3 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-
-environment:
-  name: github-pages
-  url: ${{ steps.deployment.outputs.page_url }}
