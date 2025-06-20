@@ -32,7 +32,7 @@ export default function Profile() {
       <div className="space-y-10">
         <div>
           <Image
-            src="/me.png"
+            src="/personalWebBooting/me.png"
             alt="Moch. Zamroni Fahreza"
             width={120}
             height={120}
